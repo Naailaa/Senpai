@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond"
+    tools:context=".DashboardActivity">
+
+    TextView
+        android:id="@+id/textView4"
+        android:layout_width="164dp"
+        android:layout_height="94dp"
+        android:text="Nom"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="Veuillez créer une classe et partager le code avec vos camarades pour commencer l'appel ou bien entrer le code de la classe pour les rejoindre" />
+
+            <EditText
+                android:id="@+id/codeBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/textbox_style"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Room Code"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/joinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/loginbtn_style"
+                android:text="Joindre/creer" />
+
+            <Button
+                android:id="@+id/shareBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/signupbtn_style"
+                android:text="Partager" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
